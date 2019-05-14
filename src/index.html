@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Hello Designers</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <link href="https://unpkg.com/todomvc-app-css@2.2.0/index.css" rel="stylesheet" />
+  </head>
+  <body>
+    
+    <section id="root" class="todoapp">
+      <header class="header">
+        <h1>todos</h1>
+        <input class="new-todo" autofocus autocomplete="foo" placeholder="What needs to be done?" />
+      </header>
+      <section class="main">
+        <input id="toggle-all" class="toggle-all" type="checkbox" />
+        <label for="toggle-all">Mark all as complete</label>
+        <ul class="todo-list">
+          <li class="todo">
+            <div class="view">
+              <input type="checkbox" class="toggle" />
+              <label>todo.title</label>
+              <button class="destroy"></button>
+            </div>
+            <input class="edit" type="text" />
+          </li>
+        </ul>
+        <footer class="footer">
+          <span class="todo-count">
+            <strong>n items left</strong>
+          </span>
+          <ul class="filters">
+            <li><a href="#/all">All</a></li>
+            <li><a href="#/active">Active</a></li>
+            <li><a href="#/completed">Completed</a></li>
+          </ul>
+          <button class="clear-completed">
+            Clear completed
+          </button>
+        </footer>
+      </section>
+    </section>
+
+    <footer class="info">
+      <p>Double-click to edit a todo</p>
+      <p>Created by <a href="http://github.com/petehunt/">petehunt</a></p>
+      <p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
+    </footer>
+
+    <script src="./app.jsx"></script>
+  </body>
+</html>
