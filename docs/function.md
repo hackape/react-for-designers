@@ -92,6 +92,7 @@ var sayHello = who => {
 
 sayHello('designers')
 
+// 函数内可以调用其他函数
 var sayHello = who => {
   var message = getHello() + ' ' + who
   console.log(message)
