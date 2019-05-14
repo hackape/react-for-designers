@@ -65,10 +65,10 @@ function getHello () {
 // 箭头函数 arrow function
 var add = (a, b) => { return a + b }
 
-// 如果函数体只有一句话，花括号和 return 可以省略
+// 如果函数体 (function body) 只有一句话，花括号和 return 可以省略
 var add = (a, b) => a + b
 
-// 如果这句话有换行，通常为了可读性，加上括号
+// 如果这句话有换行，通常为了可读性，函数体加上括号
 var add = (a, b) => (a
 +
 b)
