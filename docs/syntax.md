@@ -124,12 +124,27 @@ if (!boolFalse) { /* run */ }
 
 ## 对象与数组 object & array
 
-对象，object, map, dictionary
-数组，array, list
+对象，object, 也叫 map 或 dictionary
+```js
+map = { one: 1, two: 2 }
+// one 和 two 学名称之为对象的属性，object properties
+// 但通常称之为 key
+map.one === 1
+map['one'] === map.one
+map.two === 2
 
+// 重新赋值
+map.two = 3
+map.two !== 2
+map.two === 3
+
+// 删除一个 key
+delete map.two
+```
+
+数组，array, list
 ```js
 arr = [1, 2, 3, 4]
-map = { one: 1, two: 2 }
 ```
 
 ## 函数 function
