@@ -124,7 +124,7 @@ if (!boolFalse) { /* run */ }
 
 ## 对象与数组 object & array
 
-对象，object, 也叫 map 或 dictionary
+对象，学名 object, 也叫 map，有的语言里（比如 python）还叫 dictionary
 ```js
 map = { one: 1, two: 2 }
 // one 和 two 学名称之为对象的属性，object properties
@@ -142,9 +142,17 @@ map.two === 3
 delete map.two
 ```
 
-数组，array, list
+数组，学名 array, 也叫 list
 ```js
-arr = [1, 2, 3, 4]
+arr = [1, 2, 4, 8]
+arr.length === 4
+
+arr[0] === 1
+arr[1] === 2
+arr[2] === 4
+arr[3] === 8
+
+// 0, 1, 2, 3 这里称为 index，中文叫“指数”，但很少用
 ```
 
 ## 函数 function
