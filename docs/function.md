@@ -48,25 +48,48 @@ f(x) = <x+1, x*2> # 向量
 
 定义/声明一个函数 (define/declare a function)
 ```js
-function getHello () {
-  return 'hello'
-}
-
+// 声明两个参数 (params, short for parameters)，a 和 b
+// 返回 a 加 b 的值
 function add (a, b) {
   return a + b
 }
 
-var add = (a, b) => a + b
-var multiply = (a, b) => { return a * b }
-
-var sayHello = who => {
-  let message = 'hello' + ' ' + who
-  console.log(message)
+// 没有参数
+// 返回一个字符串 (return a string) 'hello'
+function getHello () {
+  return 'hello'
 }
+```
+
+```js
+// 箭头函数 arrow function
+var add = (a, b) => { return a + b }
+
+// 如果函数体只有一句话，花括号和 return 可以省略
+var add = (a, b) => a + b
+
+// 如果这句话有换行，通常为了可读性，加上括号
+var add = (a, b) => (a
++
+b)
+
+// 如果只有一个参数，参数的括号可以省略
+var timesTwo = a => a * 2
+var timesTwo = (a) => a * 2
+
+// 如果没有参数，括号是必须的
+var getHello = () => 'hello'
+
+// 拿不准的时候，括号，花括号，return 都用上，准没错
 ```
 
 调用一个函数 (call/invoke a function)
 ```js
+var sayHello = who => {
+  let message = 'hello' + ' ' + who
+  console.log(message)
+}
+
 sayHello('designers')
 
 var sayHello = who => {
