@@ -55,8 +55,18 @@ scopeA()
 
 函数接收输入，计算输出，这就是它的主作用 (main effect)。如果除此之外，函数还额外做了*对外界有影响*的事情，这些事情称之为副作用。
 
-f(x) = x + 1，同时给 jaskni 比心
+```
 f(x) = 先给 jaskni 打 call，然后 x + 1
+```
+
+```js
+function addOne(x) {
+  window.alert('call jaskni')
+  return x + 1
+}
+
+addOne(5)
+```
 
 ## 纯函数 pure function
 
