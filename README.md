@@ -1,4 +1,4 @@
-# react-for-designers
+# React for Designers
 
 概念
 
