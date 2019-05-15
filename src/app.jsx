@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 import cx from 'classnames'
 
-const todoList = [
+const initialTodoList = [
   {
     id: 1,
     title: 'buy pen',
@@ -21,10 +21,11 @@ const todoList = [
 ]
 
 function TodoApp () {
+  const [todoList, setTodoList] = useState(initialTodoList)
   return (
     <>
       <TodoHeader />
-      <TodoList />
+      <TodoList todoList={todoList} setTodoList={setTodoList} />
       <TodoFooter />
     </>
   )
@@ -39,19 +40,34 @@ function TodoHeader () {
   )
 }
 
-function TodoList () {
+function TodoList ({ todoList, setTodoList }) {
+  const updateTodo = (todoId, todoPartial) => {
+    const updatedTodoList = todoList.map(todo => {
+      if (todo.id === todoId) {
+        return {
+          ...todo,
+          ...todoPartial
+        }
+      } else {
+        return todo
+      }
+    })
+
+    setTodoList(updatedTodoList)
+  }
+
   return (
     <section className='main'>
       <input id='toggle-all' className='toggle-all' type='checkbox' />
       <label htmlFor='toggle-all'>Mark all as complete</label>
       <ul className='todo-list'>
-        {todoList.map(todo => <TodoItem key={todo.id} todo={todo} />)}
+        {todoList.map(todo => <TodoItem key={todo.id} todo={todo} update={(todoPartial) => updateTodo(todo.id, todoPartial)} />)}
       </ul>
     </section>
   )
 }
 
-function TodoItem ({ todo }) {
+function TodoItem ({ todo, update }) {
   return (
     <li className={
       cx('todo', {
@@ -59,7 +75,7 @@ function TodoItem ({ todo }) {
       })
     }>
       <div className='view'>
-        <input type='checkbox' className='toggle' checked={todo.completed} />
+        <input type='checkbox' className='toggle' checked={todo.completed} onChange={e => update({ completed: e.target.checked })} />
         <label>{todo.title}</label>
         <button className='destroy' />
       </div>
