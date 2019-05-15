@@ -18,6 +18,44 @@ if, for, while, function, in, var, const, let, ...
 ```
 
 变量名可以使用大小写字母，`_`, `$`, 以及数字，但是第一个字符不能是数字
+```js
+var _var = 1
+var $var = 1
+var _ = 1
+var $ = 1
+var 4chan = 1  // error
+```
+
+变量要先声明再使用
+```js
+var num = 1
+num + 2 // good
+```
+```js
+num + 2 // error
+var num = 1
+```
+
+另外两个声明变量的关键字 `const` & `let`
+```js
+const iDontChange = 1
+let iMightChange = 1
+
+iDontChange = 3   // error
+iMightChange = 3  // good
+```
+
+## 5 种基本数据类型 5 primitive value types
+* number 数字
+* string 字符串
+* boolean 布尔值，true/false
+* undefined 未定义
+* null 空
+
+## 3 种引用数据类型 3 reference types
+* object 对象
+* array 数组
+* function 函数
 
 ## 数字与基本运算 number & basic arithmetic
 ```js
