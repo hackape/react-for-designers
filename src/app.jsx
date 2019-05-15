@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 import cx from 'classnames'
+import Input from './input'
 
 const initialTodoList = [
   {
@@ -77,15 +78,15 @@ function TodoItem ({ todo, update }) {
       })
     }>
       <div className='view'>
-        <input type='checkbox' className='toggle' checked={todo.completed} onChange={e => update({ completed: e.target.checked })} />
+        <Input type='checkbox' className='toggle' value={todo.completed} onChange={value => update({ completed: value })} />
         <label onDoubleClick={() => setIsEditing(true)}>{todo.title}</label>
         <button className='destroy' />
       </div>
-      <input
+      <Input
         className='edit'
         type='text'
         value={todo.title}
-        onChange={e => update({ title: e.target.value })}
+        onChange={value => update({ title: value })}
         onBlur={() => setIsEditing(false)}
         onKeyUp={e => { if (e.keyCode === 13) setIsEditing(false) }}
       />
