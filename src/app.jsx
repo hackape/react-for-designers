@@ -1,6 +1,24 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+const todoList = [
+  {
+    id: 1,
+    title: 'buy pen',
+    completed: false
+  },
+  {
+    id: 2,
+    title: 'buy apple',
+    completed: false
+  },
+  {
+    id: 3,
+    title: 'buy pineapple',
+    completed: false
+  }
+]
+
 function TodoApp () {
   return (
     <>
@@ -26,18 +44,18 @@ function TodoList () {
       <input id='toggle-all' className='toggle-all' type='checkbox' />
       <label htmlFor='toggle-all'>Mark all as complete</label>
       <ul className='todo-list'>
-        <TodoItem />
+        {todoList.map(todo => <TodoItem key={todo.id} todo={todo} />)}
       </ul>
     </section>
   )
 }
 
-function TodoItem () {
+function TodoItem ({ todo }) {
   return (
     <li className='todo'>
       <div className='view'>
         <input type='checkbox' className='toggle' />
-        <label>todo.title</label>
+        <label>{todo.title}</label>
         <button className='destroy' />
       </div>
       <input className='edit' type='text' />
