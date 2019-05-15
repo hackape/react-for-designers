@@ -1,3 +1,6 @@
+import React from 'react'
+import ReactDOM from 'react-dom'
+
 function TodoApp () {
   return (
     <>
@@ -62,4 +65,4 @@ function TodoFooter () {
 
 // ========================================
 
-window.ReactDOM.render(<TodoApp />, document.getElementById('root'))
+ReactDOM.render(<TodoApp />, document.getElementById('root'))
