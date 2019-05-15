@@ -1,11 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import cx from 'classnames'
 
 const todoList = [
   {
     id: 1,
     title: 'buy pen',
-    completed: false
+    completed: true
   },
   {
     id: 2,
@@ -52,9 +53,13 @@ function TodoList () {
 
 function TodoItem ({ todo }) {
   return (
-    <li className='todo'>
+    <li className={
+      cx('todo', {
+        completed: todo.completed
+      })
+    }>
       <div className='view'>
-        <input type='checkbox' className='toggle' />
+        <input type='checkbox' className='toggle' checked={todo.completed} />
         <label>{todo.title}</label>
         <button className='destroy' />
       </div>
