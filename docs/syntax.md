@@ -32,7 +32,7 @@ var num = 1
 num + 2 // good
 ```
 ```js
-num + 2 // error
+num + 2 // bad
 var num = 1
 ```
 
