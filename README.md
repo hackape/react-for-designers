@@ -16,4 +16,4 @@
 ### 视频
 
 1. [工具介绍，以及初试 React](http://prk8lnta9.bkt.clouddn.com/videos/session_1.mp4)
-2. [声明变量，5种基本数据类型以及条件语句](http://prk8lnta9.bkt.clouddn.com/videos/session_2.mp4)
+2. [声明变量，5种基本数据类型以及条件语句](http://prk8lnta9.bkt.clouddn.com/videos/session_3.mp4)
