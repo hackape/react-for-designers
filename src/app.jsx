@@ -68,18 +68,27 @@ function TodoList ({ todoList, setTodoList }) {
 }
 
 function TodoItem ({ todo, update }) {
+  const [isEditing, setIsEditing] = useState(false)
   return (
     <li className={
       cx('todo', {
-        completed: todo.completed
+        completed: todo.completed,
+        editing: isEditing
       })
     }>
       <div className='view'>
         <input type='checkbox' className='toggle' checked={todo.completed} onChange={e => update({ completed: e.target.checked })} />
-        <label>{todo.title}</label>
+        <label onDoubleClick={() => setIsEditing(true)}>{todo.title}</label>
         <button className='destroy' />
       </div>
-      <input className='edit' type='text' />
+      <input
+        className='edit'
+        type='text'
+        value={todo.title}
+        onChange={e => update({ title: e.target.value })}
+        onBlur={() => setIsEditing(false)}
+        onKeyUp={e => { if (e.keyCode === 13) setIsEditing(false) }}
+      />
     </li>
   )
 }
