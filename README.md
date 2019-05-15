@@ -16,3 +16,4 @@
 ### 视频
 
 * [Session 1](http://prk8lnta9.bkt.clouddn.com/videos/session_1.mp4)
+* [Session 2](http://prk8lnta9.bkt.clouddn.com/videos/session_2.mp4)
