@@ -19,7 +19,7 @@
 
 ### 拓展阅读
 
-* [解构赋值语法](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+* [解构赋值 destructuring assignment](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 
 ## 提问
 
