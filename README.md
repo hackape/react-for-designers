@@ -1,6 +1,6 @@
 # React for Designers
 
-### 概念
+### JS 基础概念
 
 * [基础语法](docs/syntax.md)
 * [函数与映射](docs/function.md)
@@ -15,7 +15,11 @@
 
 ### 视频
 
-[B 站传送门](https://www.bilibili.com/video/av52639111/)
+* [B 站传送门](https://www.bilibili.com/video/av52639111/)
+
+### 拓展阅读
+
+* [解构赋值语法](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 
 ## 提问
 
